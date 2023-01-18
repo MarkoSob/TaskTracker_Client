@@ -1,0 +1,15 @@
+.confirmBtn{
+    padding: 5px 15px;
+    color:#ffffff;
+    font-size: 14px;
+    background-color: #58a396;
+    border: 1px solid #58a396;
+    cursor: pointer;
+    border-radius: 9px;
+}
+
+.confirmBtn:hover {
+    transition-duration: 0.3s;
+    background: #457e74;
+    border: 1px solid #457e74;
+  }

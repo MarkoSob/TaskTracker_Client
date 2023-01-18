@@ -1,0 +1,17 @@
+.myDeleteBtn{
+    width: 100px;
+    padding: 5px 15px;
+    color:#cb0000;
+    font-size: 14px;
+    background: transparent;
+    border: 2px solid #cb0000;
+    cursor: pointer;
+    border-radius: 9px;
+}
+
+.myDeleteBtn:hover {
+    transition-duration: 0.3s;
+    color:#f5fffd;
+    background: #cb0000;
+    border: 2px solid #cb0000;
+  }

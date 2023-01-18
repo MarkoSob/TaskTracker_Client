@@ -1,0 +1,15 @@
+.createBtn{
+    width: 220px;
+    margin: 40px 15px 10px 15px;
+    padding: 5px 15px;
+    color:#ffffff;
+    font-size: 14px;
+    background-color: #58a396;
+    cursor: pointer;
+    border-radius: 9px;
+}
+
+.createBtn:hover {
+    background-color: #457e74;
+    transition-duration: 0.3s;
+  }

@@ -1,0 +1,17 @@
+.navbarBtn{
+    padding: 5px 15px;
+    color:#82ecdb;
+    font-size: 14px;
+    background: transparent;
+    border: 1px solid #87f5e3;
+    cursor: pointer;
+    border-radius: 9px;
+    margin-left: 8px;
+}
+
+.navbarBtn:hover {
+    transition-duration: 0.3s;
+    color:#f5fffd;
+    background: #5aa396;
+    border: 1px solid #5aa396;
+  }
