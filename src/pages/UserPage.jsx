@@ -12,6 +12,8 @@ import FlipCard from "../components/UI/flipCard/FlipCard";
 import UserUpdateForm from "../components/UserUpdateForm";
 import MyModal from "../components/UI/mymodal/MyModal";
 import { fabClasses } from "@mui/material";
+import ConfirmButton from "../components/UI/button/ConfirmButton";
+import UserCard from "../components/UserCard";
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
@@ -22,23 +24,10 @@ const UserPage = () => {
     const [userInfo, setUserInfo] = useState({});
     const [updateModal, setUpdateModal] = useState(false);
 
-    const getImagePath = async () => {
-        const response = await ImageService.getImagePath(localStorage.getItem('email'));
-        console.log(response);
-        setImagePath(response.data);
-    }
-
     const getUserInfo = async () => {
         const response = await UserService.getUserInfo(localStorage.getItem('email'));
         console.log(response);
         setUserInfo(response.data);
-    }
-    
-
-    const updateUser = async () => {
-        const response = await UserService.getUserInfo(localStorage.getItem('email'));
-        setUserInfo(response.data);
-        setUpdateModal(false)
     }
 
     useEffect(() => {
@@ -46,28 +35,8 @@ const UserPage = () => {
     }, []);
 
     return (
-        <div className="userPage">
-            <div className="userCard">
-                <div>
-                     <div><b>First name:</b> </div>
-                     <div><b>Last name:</b> </div>
-                     <div><b>Creation date:</b> </div>
-                     <div><b>Email:</b></div>
-                </div>
-                <div>
-                   <div>{userInfo.firstName}</div>
-                   <div>{userInfo.lastName}</div>
-                   <div>{userInfo.creationDate}</div>
-                   <div>{userInfo.email}</div>
-                </div>
-                <div>
-                   <MyButton onClick={() => setUpdateModal(true)}>Edit</MyButton>
-                </div>
-
-            </div>
-            <MyModal visible={updateModal} setVisible={setUpdateModal}>
-                <UserUpdateForm user={userInfo} update={updateUser}/>
-            </MyModal>
+        <div>
+        <UserCard/>
         </div>
     )
 }

@@ -13,3 +13,36 @@
     align-items: center;
    
 }
+
+.menuBtn{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: none;
+}
+
+@media (max-width: 700px) {
+    .menuBtn{
+    display: flex;
+    position: inherit;
+    
+    }
+}
+
+
+.navBtns{
+
+}
+
+@media (max-width: 700px) {
+    .navBtns{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        display: none;
+    }
+}

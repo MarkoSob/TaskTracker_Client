@@ -25,6 +25,14 @@
     overflow-y:hidden;  /*для вертикального*/
 }
 
+@media (max-width: 700px) {
+    .mainArea{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        'main';
+    }
+}
+
 aside{
     grid-area: aside;
 }
@@ -50,6 +58,17 @@ main{
     flex-direction: column;
     overflow:hidden;
     overflow-y:hidden;  /*для вертикального*/
+}
+
+@media (max-width: 700px) {
+    .sidebar{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        display: none;
+    }
 }
 
 
@@ -191,6 +210,14 @@ main{
     
 }
 
+@media (max-width: 700px) {
+    .newTaskForm{
+        width: 300px;
+        grid-template-rows: 40px 50px 170px 160px 160px 50px;
+    }
+}
+
+
 .newTaskForm>h3:nth-child(1){
     display: grid;
     grid-column: 1/-1;
@@ -206,6 +233,14 @@ main{
     grid-template-columns: 370px;
     justify-content: center;  
 }
+
+@media (max-width: 700px) {
+    .registrationForm{
+        width: 300px;
+        grid-template-columns: 270px;
+    }
+}
+
 
 .registrationForm>div:nth-child(1){
     display: grid;
@@ -223,11 +258,24 @@ main{
     justify-content: center;
 }
 
+@media (max-width: 700px) {
+    .newLoginForm{
+        width: 300px;
+        grid-template-columns: 270px;
+    }
+}
+
 .fieldsPickArea{
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
     align-items: center;
+}
+
+@media (max-width: 700px) {
+    .fieldsPickArea{
+        grid-template-columns: 1fr;
+    }
 }
 
 .fieldPicker{
@@ -240,6 +288,12 @@ main{
 .newUserForm{
     color: #58a396;
     width: 350px;
+}
+
+@media (max-width: 700px) {
+    .newUserForm{
+        width: 300px;
+    }
 }
 
 .loginPage{
@@ -264,8 +318,35 @@ main{
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
+}
+
+@media (max-width: 700px) {
+    .loginBtns{
+        display: grid;
+        align-items: center;
+    
+        flex-direction: column;
+        row-gap: 10px;
+        width: 300px;
+        grid-template-columns: 270px;
+    }
+
+    .loginBtns>div:nth-child(1){
+        
+        grid-column: 1/-1;
+        align-self: center;
+        justify-self: center;
+      }
+
+      .loginBtns>div:nth-child(2){
+        display: grid;
+        grid-column: 1/-1;
+        align-self: center;
+        justify-self: center;
+      }
 
 }
+
 
 .formLabels{
     margin-bottom: 12px;
@@ -283,7 +364,7 @@ main{
     margin: 0;
     display: flex;
     justify-content: center;
-     align-items: center;
+    align-items: center;
     height: 100vh;
 }
 
@@ -316,6 +397,8 @@ main{
     border: 2px solid #58a396;
     border-radius: 5px;
     }
+
+
 
 .loginForm{
     width: 100%;
